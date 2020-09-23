@@ -16,7 +16,9 @@ class _OrderScreenState extends State<OrderScreen> {
     final cart = Provider.of<Cart>(context);
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width * 0.4,
@@ -52,11 +54,11 @@ class _OrderScreenState extends State<OrderScreen> {
                 itemCount: cart.items.length,
                 itemBuilder: (context, index) {
                   return CartOrderItem(
+                    cart.items.values.toList()[index].id,
                     cart.items.values.toList()[index].itemUuid,
                     cart.items.values.toList()[index].itemName,
-                    cart.items.values.toList()[index].description,
                     cart.items.values.toList()[index].image,
-                    cart.items.values.toList()[index].id,
+                    cart.items.values.toList()[index].description,
                     cart.items.values.toList()[index].unitPrice,
                     cart.items.values.toList()[index].unitTime,
                     cart.items.values.toList()[index].unitType,

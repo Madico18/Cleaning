@@ -45,9 +45,11 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Войти',
-          style: Theme.of(context).textTheme.headline1,
+        title: Center(
+          child: Text(
+            'Войти',
+            style: Theme.of(context).textTheme.headline1,
+          ),
         ),
         backgroundColor: Colors.white,
       ),

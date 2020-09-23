@@ -19,10 +19,10 @@ class CartOrderItem extends StatefulWidget {
 
   CartOrderItem(
     this.id,
-    this.itemName,
-    this.description,
     this.itemUuid,
+    this.itemName,
     this.image,
+    this.description,
     this.unitPrice,
     this.unitTime,
     this.unitType,
@@ -38,7 +38,8 @@ class _CartOrderItemState extends State<CartOrderItem> {
   String imageUrlTransform(String url) {
     String newUrl = url.substring(22, url.length);
 
-    print(newUrl);
+    print(widget.image);
+    print(imageUrl + newUrl);
 
     return newUrl;
   }

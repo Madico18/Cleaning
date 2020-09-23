@@ -8,9 +8,14 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'demo',
-          style: Theme.of(context).textTheme.headline5,
+        automaticallyImplyLeading: false,
+        title: Container(
+          width: double.infinity,
+          child: Text(
+            'demo',
+            style: Theme.of(context).textTheme.headline5,
+            textAlign: TextAlign.center,
+          ),
         ),
         backgroundColor: Colors.white,
       ),
